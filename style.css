@@ -271,7 +271,7 @@ tbody tr:last-child td {
         align-items: flex-start;
         gap: 1rem;
         margin-bottom: 1.5rem;
-        margin-left: 0.5rem;
+        margin-left: 0.25rem;
     }
     th, td {
         padding: 0.85rem;
