@@ -1,6 +1,6 @@
 {
-  "name": "Electrical Application",
-  "short_name": "ElectricalApp",
+  "name": "Equipment Protection App",
+  "short_name": "ProtectionApp",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#ffffff",
