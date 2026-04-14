@@ -144,7 +144,15 @@
                             param = `${param} (${prot[actionKey]})`;
                         }
                         
-                        let valDisplay = String(val).trim() ? val : '';
+                        let valDisplay = '';
+                        if (Array.isArray(val)) {
+                            valDisplay = val.map((v, i) => {
+                                let mb = i < val.length - 1 ? 'margin-bottom: 0.5rem;' : '';
+                                return `<div style="${mb}">${v}</div>`;
+                            }).join('');
+                        } else {
+                            valDisplay = String(val).trim() ? val : '';
+                        }
 
                         return `
                             <tr>
