@@ -10,9 +10,9 @@ const appData = {
       { "Parameter": "FLAME SUPPORT CONDITION NOT SATISFIED", "Value": "" },
       { "Parameter": "BUNKER LEVEL LOW", "Value": "< 2 M" },
       { "Parameter": "FEEDER TEMP HIGH", "Value": "> 66°C" },
-      { "Parameter": "CLASSIFIER O/L TEMP HIGH", "Value": "> 121 °C (300 sec) / > 126 °C (no delay)" },
-      { "Parameter": "PRIMARY AIR FLOW LOW", "Value": "< 27.5 ksc (99 tph) (2 sec)" },
-      { "Parameter": "COMBUSTION AIR FLOW LOW", "Value": "<1 6 ksc (30 sec)" },
+      { "Parameter": "CLASSIFIER O/L TEMP HIGH", "Value": ["> 121 °C (300 sec)", "> 126 °C (no delay)"] },
+      { "Parameter": "PRIMARY AIR FLOW LOW", "Value": "<  27.5 ksc (99 tph) (2 sec)" },
+      { "Parameter": "COMBUSTION AIR FLOW LOW", "Value": "< 16 ksc (30 sec)" },
       { "Parameter": "ANY BIV NOT OPEN", "Value": "" },
       { "Parameter": "ANY MDV NOT OPEN", "Value": "" },
       { "Parameter": "HAG OR CAG CLOSE (AFTER FEEDER ON)", "Value": "300 sec delay" },
@@ -46,7 +46,20 @@ const appData = {
       { "Parameter": "MOTOR WINDING TEMP (R/Y/B) HI", "Value": "> 124°C" },
       { "Parameter": "FAN DE/NDE BRG VIBRATION (X/Y) HI", "Value": "> 11 mm/s" },
       { "Parameter": "MOTOR DE/NDE BRG VIBRATION (X/Y) HI", "Value": "> 7.1 mm/s" },
-      { "Parameter": "PROTECTION OFF CONDITION FOR ID FAN", "Value": "FURNACE PR < -200mmWc OR FAN SUCTION PR < -600mmWC OR FAN DISCHARGE PR > 200mmWC OR BOILER CCT LEVEL > 2200 mm OR CORRESPONDING APH FG O/L TEMP > 200°C" },
+      {
+        "Parameter": "PROTECTION OFF CONDITION FOR ID FAN",
+        "Value": [
+          "FURNACE PR < -200mmWc",
+          "OR",
+          "FAN SUCTION PR. < -600mmWC",
+          "OR",
+          "FAN DISCHARGE PR. > 200mmWC",
+          "OR",
+          "BOILER CCT LEVEL > 2200 mm",
+          "OR",
+          "CORRESPONDING APH FG O/L TEMP > 200°C"
+        ]
+      },
       { "Parameter": "FD FAN STALL PROTECTION ACTED", "Value": "calculated value" }
     ],
     "PA fan": [
@@ -64,20 +77,55 @@ const appData = {
       { "Parameter": "MOTOR WINDING TEMP (R/Y/B) HI", "Value": "> 130°C (3 sec)" },
       { "Parameter": "FAN DE/NDE BRG VIBRATION (X/Y) HI", "Value": "> 11 mm/s (2 sec)" },
       { "Parameter": "MOTOR DE/NDE BRG VIBRATION (X/Y) HI", "Value": "> 7.1 mm/s (3 sec)" },
-      { "Parameter": "FAN PROTECTION OFF CONDITION", "Value": "BOTH ID FAN TRIPPED OR FR. DRAFT > 200 mmWC" },
+      {
+        "Parameter": "FAN PROTECTION OFF CONDITION",
+        "Value": ["BOTH ID FAN TRIPPED", "OR", "FR. DRAFT > 200 mmWC"]
+      },
       { "Parameter": "FD FAN STALL PROTECTION ACTED", "Value": "calculated value" }
     ],
     "MFT condition": [
       { "Parameter": "PROTECTION OFF CONDITION FOR BOTH FD FAN", "Value": "FURNACE PR > 200mmWc" },
       { "Parameter": "BOTH FD FAN OFF CONDITION", "Value": "" },
-      { "Parameter": "PROTECTION OFF CONDITION FOR BOTH ID FAN", "Value": "FURNACE PR < -200mmWc OR FAN SUCTION PR. < -600mmWC OR FAN DISCHARGE PR. > 200mmWC OR BOILER CCT LEVEL > 2200 mm OR APH FG O/L TEMP > 200°C" },
+      {
+        "Parameter": "PROTECTION OFF CONDITION FOR BOTH ID FAN",
+        "Value": [
+          "FURNACE PR < -200mmWc",
+          "OR",
+          "FAN SUCTION PR. < -600mmWC",
+          "OR",
+          "FAN DISCHARGE PR. > 200mmWC",
+          "OR",
+          "BOILER CCT LEVEL > 2200 mm",
+          "OR",
+          "APH FG O/L TEMP > 200°C"
+        ]
+      },
       { "Parameter": "BOTH ID FAN OFF CONDITION", "Value": "" },
       { "Parameter": "AIR FLOW LOW", "Value": "< 140 kg/Sec" },
-      { "Parameter": "ECO FLOW LOW", "Value": "< 690 TPH (20 s) if any BFP ON OR < 690 TPH (4 s) if no BFP ON" },
-      { "Parameter": "EVAPORATOR O/L STEAM TEMP HIGH (LEFT/RIGHT)", "Value": "> 477°C (15 min Delay) OR > 487°C (instant trip)" },
-      { "Parameter": "MS (SH3 OUTLET) TEMP HIGH (LEFT/RIGHT)", "Value": "> 590°C (15 min Delay) OR > 595°C (instant trip)" },
-      { "Parameter": "RH1 OUTLET STEAM TEMP HIGH (LEFT/RIGHT)", "Value": "> 550°C (15 min Delay) OR > 555°C (instant trip)" },
-      { "Parameter": "HRH (RH2 OUTLET) STEAM TEMP HIGH (LEFT/RIGHT)", "Value": "> 620°C (15 min Delay) OR > 625°C (instant trip)" },
+      {
+        "Parameter": "ECO FLOW LOW",
+        "Value": [
+          "< 690 TPH (20 s) if any BFP ON",
+          "OR",
+          "< 690 TPH (4 s) if no BFP ON"
+        ]
+      },
+      {
+        "Parameter": "EVAPORATOR O/L STEAM TEMP HIGH (LEFT/RIGHT)",
+        "Value": ["> 477°C (15 min Delay)", "> 487°C (instant trip)"]
+      },
+      {
+        "Parameter": "MS (SH3 OUTLET) TEMP HIGH (LEFT/RIGHT)",
+        "Value": ["> 590°C (15 min Delay)", "> 595°C (instant trip)"]
+      },
+      {
+        "Parameter": "RH1 OUTLET STEAM TEMP HIGH (LEFT/RIGHT)",
+        "Value": ["> 550°C (15 min Delay)", "> 555°C (instant trip)"]
+      },
+      {
+        "Parameter": "HRH (RH2 OUTLET) STEAM TEMP HIGH (LEFT/RIGHT)",
+        "Value": ["> 620°C (15 min Delay)", "> 625°C (instant trip)"]
+      },
       { "Parameter": "LOSS OF FLAME", "Value": "" },
       { "Parameter": "ALL FUEL INPUT OFF", "Value": "" },
       { "Parameter": "IGNITION STD TIME OVER (AFTER MFT RESET)", "Value": "30 min delay" },
@@ -98,8 +146,8 @@ const appData = {
       { "Parameter": "VAC PUMP SUC V/V CLOSING FAULT", "Value": "" },
       { "Parameter": "VAC PUMP SUC V/V DISTURBANCE", "Value": "10 sec delay" },
       { "Parameter": "VAC PUMP SEP LEVEL LOLO AND ALL CEP OFF", "Value": "180 sec delay" },
-      { "Parameter": "SEAL WATER PUMP ON AND SEAL WATER FLOW < MIN 1", "Value": "5 sec delay" },
-      { "Parameter": "VAC PUMP SEP MAKE UP VV OPEN AND SEP LVL < MIN1", "Value": "120 sec delay" },
+      { "Parameter": "SEAL WATER PUMP ON AND SEAL WATER FLOW <MIN 1", "Value": "5 sec delay" },
+      { "Parameter": "VAC PUMP SEP MAKE UP VV OPEN AND SEP LVL<MIN1", "Value": "120 sec delay" },
       { "Parameter": "EPB PRESSED", "Value": "" }
     ],
     "TDBFP": [
@@ -115,7 +163,7 @@ const appData = {
       { "Parameter": "SPUR GEAR DE/NDE VIB HIGH", "Value": "> 9.5 mm/s" },
       { "Parameter": "BOOSTER PUMP DE/NDE VIB HIGH", "Value": "> 11.2 mm/s" },
       { "Parameter": "MAIN PUMP SHAFT (SUC/DISCHR SIDE) VIB HIGH", "Value": "> 118 micron" },
-      { "Parameter": "BOOSTER PUMP DE/NDE BRG TEMP HIGH", "Value": ">1 00°C" },
+      { "Parameter": "BOOSTER PUMP DE/NDE BRG TEMP HIGH", "Value": "> 100°C" },
       { "Parameter": "MAIN PUMP DE/NDE BRG TEMP HIGH", "Value": "> 100°C" },
       { "Parameter": "TEMP RADIAL HELICAL GEAR DE/NDE HIGH", "Value": "> 115°C" },
       { "Parameter": "BOOSTER PUMP DE/NDE SEAL WTR TEMP HIGH", "Value": "> 95°C" },
@@ -181,9 +229,15 @@ const appData = {
       { "Parameter": "LPT EXHAUST PR HIGH", "Value": "> 0.4 ksc" }
     ],
     "HP bypass": [
-      { "Parameter": "HP BYPASS DNST TEMP HIGH (2/3)", "Value": "> 390°C (23 sec) / > 400°C (6 sec)" },
-      { "Parameter": "ST TRIP AND LP BYPASS TRIP AND MS PR >50 KSC", "Value": "" },
-      { "Parameter": "HP BYPASS CV QUICK OPENING", "Value": "FOR BOILER LOAD MORE THAN 60% AND GEN NOT ON GRID OR ST PROTECTION TRIP" }
+      {
+        "Parameter": "HP BYPASS DNST TEMP HIGH (2/3)",
+        "Value": ["> 390°C (23 sec)", "> 400°C (6 sec)"]
+      },
+      { "Parameter": "ST TRIP AND LP BYPASS TRIP AND MS PR > 50 KSC", "Value": "" },
+      {
+        "Parameter": "HP BYPASS CV QUICK OPENING",
+        "Value": "FOR BOILER LOAD MORE THAN 60% AND GEN NOT ON GRID OR ST PROTECTION TRIP"
+      }
     ],
     "CEP": [
       { "Parameter": "THRUST BRG TEMP HIGH", "Value": "> 125°C (3 s)" },
@@ -230,21 +284,40 @@ const appData = {
       { "Parameter": "EPB OPERATED", "Value": "" }
     ],
     "Main turbine": [
-      { "Parameter": "TURBINE HIGH SPEED", "Value": "> 3180 rpm (5 sec) / > 3150 rpm (10 sec) / > 3090 rpm (20 sec)" },
+      {
+        "Parameter": "TURBINE HIGH SPEED",
+        "Value": [
+          "> 3180 rpm (5 sec)",
+          "> 3150 rpm (10 sec)",
+          "> 3090 rpm (20 sec)"
+        ]
+      },
       { "Parameter": "TURBINE OVERSPEED HW PROTECTION", "Value": "> 3330 rpm" },
       { "Parameter": "TURBINE UNDER FREQ PROTECTION", "Value": "< 2745 rpm (2 sec)" },
       { "Parameter": "TURBINE STANDSTILL PROTECTION", "Value": "< 3 rpm" },
       { "Parameter": "LPT EXHAUST PRESSURE HIGH (SPEED>1500 RPM) HW", "Value": "> 0.61 ksc" },
       { "Parameter": "SAFETY OIL PRESSURE LOW", "Value": "< 27.53 ksc" },
-      { "Parameter": "LUBE OIL PRESSURE LOW", "Value": "< 0.92ksc" },
-      { "Parameter": "THRUST POSITION HIGH", "Value": "> (+/-)0.8 mm" },
+      { "Parameter": "LUBE OIL PRESSURE LOW", "Value": "< 0.92 ksc" },
+      { "Parameter": "THRUST POSITION HIGH", "Value": "> (+/-) 0.8 mm" },
       { "Parameter": "HIGH BEARING VIBRATION", "Value": "> 240 micron (1 sec)" },
       { "Parameter": "HIGH BEARING VIBRATION WHILE ROLLING", "Value": "> 360 micron (1 sec)" },
       { "Parameter": "LPT VENT TEMP HI", "Value": "> 200°C" },
-      { "Parameter": "HPT STRESS HIGH", "Value": "> 105% (Instantaneous) / > 102% (5 min)" },
-      { "Parameter": "IPT STRESS HIGH", "Value": "> 105% (Instantaneous) / > 102% (5 min)" },
-      { "Parameter": "LIVE STEAM (MS) TEMP HIGH", "Value": "> 593°C (Instantaneous) / > 579°C (15 min)" },
-      { "Parameter": "HRH TEMP HIGH", "Value": "> 620°C (Instantaneous) / > 608°C (15 min)" },
+      {
+        "Parameter": "HPT STRESS HIGH",
+        "Value": ["> 105%", "> 102% (5 min)"]
+      },
+      {
+        "Parameter": "IPT STRESS HIGH",
+        "Value": ["> 105%", "> 102% (5 min)"]
+      },
+      {
+        "Parameter": "LIVE STEAM (MS) TEMP HIGH",
+        "Value": ["> 593°C", "> 579°C (15 min)"]
+      },
+      {
+        "Parameter": "HRH TEMP HIGH",
+        "Value": ["> 620°C", "> 608°C (15 min)"]
+      },
       { "Parameter": "HPT EXHAUST TEMP HIGH", "Value": "> 500°C" },
       { "Parameter": "HPT DP HIGH", "Value": "> 25.39 ksc" },
       { "Parameter": "LUBE OIL TANK LEVEL LOW", "Value": "< 100 mm" },
@@ -279,7 +352,15 @@ const appData = {
   "Offsite": {
     "Fire water pumps": [
       { "Pump Name": "JOCKEY PUMP", "Action": "AUTO START", "Condition": "HDR PR < 9.5 KSC" },
-      { "Pump Name": "JOCKEY PUMP", "Action": "AUTO STOP", "Condition": "HDR PR > 10.5 KSC OR ANY HYDRANT OR SPRAY PUMP ON" },
+      {
+        "Pump Name": "JOCKEY PUMP",
+        "Action": "AUTO STOP",
+        "Condition": [
+          "HDR PR > 10.5 KSC",
+          "OR",
+          "ANY HYDRANT OR SPRAY PUMP ON"
+        ]
+      },
       { "Pump Name": "HYDRANT PUMP 1", "Action": "AUTO START", "Condition": "HDR PR < 8.5 KSC" },
       { "Pump Name": "HYDRANT PUMP 2", "Action": "AUTO START", "Condition": "HDR PR < 7.5 KSC" },
       { "Pump Name": "HYDRANT PUMP 3", "Action": "AUTO START", "Condition": "HDR PR < 6.5 KSC" },
@@ -361,7 +442,7 @@ const appData = {
       { "Parameter": "CW PUMP SEAL WATER FLOW LOW", "Value": "5 sec delay" },
       { "Parameter": "CW PUMP SEAL WATER DISCHARGE PR LOW", "Value": "< 3 ksc (30 s)" },
       { "Parameter": "CWP SEAL WATER PP 1/2 TRIP AND PP 2/1 FAIL TO START", "Value": "" },
-      { "Parameter": "CWP ON FOR 15 SEC AND BFV > 90% N OPEN FOR 80 SEC", "Value": "" },
+      { "Parameter": "CWP ON FOR 15 SEC AND BFV >90% N OPEN FOR 80 SEC", "Value": "" },
       { "Parameter": "EPB PRESSED", "Value": "" }
     ],
     "Aux boiler BFP": [
@@ -388,38 +469,38 @@ const appData = {
       { "Parameter": "LOCAL EPB PRESSED", "Value": "" }
     ],
     "Ujjani MUWP": [
-      { "Parameter": "MUWP MTR WDG TEMP > MAX2 (R/Y/B-PHASE)", "Value": "> 130 Degree (4 sec)" },
-      { "Parameter": "MUWP MTR NDE BRG TEMP - 1, 2 (1/2) > MAX2", "Value": "> 85 Degree (4 sec)" },
-      { "Parameter": "MUWP MTR DE BRG TEMP - 1 > MAX2", "Value": "> 85 Degree (4 sec)" },
-      { "Parameter": "MUWP MTR NDE THR BRG TEMP-1, 2 (1/2) > MAX2", "Value": "> 85 Degree (4 sec)" },
-      { "Parameter": "MUWP SUMP LEVEL-1/2 < MIN2", "Value": " < 2.4M" },
+      { "Parameter": "MUWP MTR WDG TEMP > MAX2 (R/Y/B-PHASE)", "Value": "> 130 Degree (4 sec delay)" },
+      { "Parameter": "MUWP MTR NDE BRG TEMP - 1, 2 (1/2)", "Value": "> 85 Degree (4 sec delay)" },
+      { "Parameter": "MUWP MTR DE BRG TEMP - 1", "Value": "> 85 Degree (4 sec delay)" },
+      { "Parameter": "MUWP MTR NDE THR BRG TEMP-1, 2 (1/2)", "Value": "> 85 Degree (4 sec delay)" },
+      { "Parameter": "MUWP SUMP LEVEL-1/2<MIN2", "Value": "< 2.4M" },
       { "Parameter": "LUB WATER OVERHEAD TANK LEVEL < MIN2", "Value": "< 0.4M" },
-      { "Parameter": "MUWP DISCH PRESS > MAX2", "Value": "> 25.5 kg/cm2 (60 sec)" },
-      { "Parameter": "MUWP PUMP THR BRG TEMP-1 > MAX2", "Value": "> 80 Degree (4 sec)" },
-      { "Parameter": "MUWP MTR DE/NDE BRG VIB (X,Y) 1/2 > MAX2", "Value": "> 10.5 mm/sec (15 sec)" },
-      { "Parameter": "MUWP PUMP THR BRG VIB (X,Y) 1/2 > MAX2", "Value": "> 8.5 mm/sec (10 sec)" },
+      { "Parameter": "MUWP DISCH PRESS > MAX2", "Value": "> 25.5 kg/cm2 (60 sec delay)" },
+      { "Parameter": "MUWP PUMP THR BRG TEMP-1> MAX2", "Value": "> 80 Degree (4 sec delay)" },
+      { "Parameter": "MUWP MTR DE/NDE BRG VIB (X,Y) 1/2 > MAX2", "Value": "> 10.5 mm/sec (15 sec delay)" },
+      { "Parameter": "MUWP PUMP THR BRG VIB (X,Y) 1/2 > MAX2", "Value": "> 8.5 mm/sec (10 sec delay)" },
       { "Parameter": "LUB WATER PUMPS DISCH PRESS < MIN2", "Value": "< 20 kg/cm2" },
       { "Parameter": "ALL LUB WATER PUMPS STOP", "Value": "" },
-      { "Parameter": "MUWP START & DISCH VLV N-OPEN & S/D SEQ N- ON", "Value": "90 sec delay" },
+      { "Parameter": "MUWP START & DISCH VLV N-OPEN & S/D SEQ N- ON", "Value": "90sec delay" },
       { "Parameter": "LUBE WATER FLOW TO PUMP SEALING LOW", "Value": "< 25LPM" }
     ]
   },
   "FGD": {
     "FGD booster fan": [
       { "Parameter": "BF1 Emergency PB is ACTIVATED/PRESSED", "Value": "" },
-      { "Parameter": "BF1 Motor Winding Temp is H2", "Value": "H2 >= 130" },
-      { "Parameter": "BF1 Motor DE Bearing Temp is H2", "Value": "H2 >= 95" },
-      { "Parameter": "BF1 Motor NDE Bearing Temp is H2", "Value": "H2 >= 95" },
-      { "Parameter": "BF1 Motor DE Bearing Vibration is H2", "Value": "H2 >= 7.0" },
-      { "Parameter": "Main Bearing Assembly Vibration is H2", "Value": "H2 >= 7.2" },
-      { "Parameter": "Radial Bearing DE Temperature is H2", "Value": "H2 >= 100" },
-      { "Parameter": "Thrust Bearing Temperature NDE is H2", "Value": "H2 >= 100" },
-      { "Parameter": "Radial Bearing Temperature NDE is H2", "Value": "H2 >= 100" },
-      { "Parameter": "Stall Trip-DPT is H2 (more than 120 s)", "Value": "H2 >= 50" },
+      { "Parameter": "BF1 Motor Winding Temp is H2", "Value": ">=  130" },
+      { "Parameter": "BF1 Motor DE Bearing Temp is H2", "Value": ">= 95" },
+      { "Parameter": "BF1 Motor NDE Bearing Temp is H2", "Value": ">= 95" },
+      { "Parameter": "BF1 Motor DE Bearing Vibration is H2", "Value": ">= 7.0" },
+      { "Parameter": "Main Bearing Assembly Vibration is H2", "Value": ">= 7.2" },
+      { "Parameter": "Radial Bearing DE Temperature is H2", "Value": ">= 100" },
+      { "Parameter": "Thrust Bearing Temperature NDE is H2", "Value": ">= 100" },
+      { "Parameter": "Radial Bearing Temperature NDE is H2", "Value": ">= 100" },
+      { "Parameter": "Stall Trip-DPT is H2 (more than 120 s)", "Value": ">= 50" },
       { "Parameter": "Booster Fan O/L gate CLOSD Status", "Value": "10 Sec" },
       { "Parameter": "Booster Fan I/L gate CLOSD Status", "Value": "10 Sec" },
       { "Parameter": "Absorber in Emg & WFGD Bypass Damper open", "Value": "10 Sec" },
-      { "Parameter": "BF2 INT/EXT/NDE TEMP SWITCH HH (5 secs delay)", "Value": "H2 >= 95" },
+      { "Parameter": "BF2 INT/EXT/NDE TEMP SWITCH HH (5 secs delay)", "Value": ">= 95" },
       { "Parameter": "Booster Fans common shutdown due to MFT", "Value": "" },
       { "Parameter": "Absorber in EMG, ESP Opacity High >175 (5secs delay)", "Value": "" }
     ],
@@ -434,7 +515,7 @@ const appData = {
       { "Parameter": "BYPASS DAMPER FAILED TO OPEN", "Value": "10 sec (Prot. Open)" },
       { "Parameter": "BYPASS DAMPER FAILED TO CLOSE AND PRS DEV >=-2 Mbar", "Value": "150 sec" },
       { "Parameter": "BYPASS DAMPER AUTO OPEN CMD", "Value": "NA" },
-      { "Parameter": "BYPASS DAMPER BOTH FB AND PRS DEV>=-2 Mbar", "Value": "2 mbar 10 sec" },
+      { "Parameter": "BYPASS DAMPER BOTH FB AND PRS DEV >= -2 Mbar", "Value": "2 mbar 10 sec" },
       { "Parameter": "EPB PRESSED", "Value": "2 sec" },
       { "Parameter": "BYPASS DAMPER OPEN COMMAND1 OR COMMANAD2 FROM BOILER DCS", "Value": "Auto Open" },
       { "Parameter": "FG01REMOTE NODES OR MODULE FAILED", "Value": "10 sec" },
@@ -451,27 +532,27 @@ const appData = {
       { "Parameter": "BOOSTER FAN B BLADE PITCH FAULT", "Value": "5 sec" }
     ],
     "FGD RC pump": [
-      { "Parameter": "RCP 3 MTR WDG R PH H2", "Value": "H2 >= 130" },
-      { "Parameter": "RCP 3 MTR WDG Y PH H2", "Value": "H2 >= 130" },
-      { "Parameter": "RCP 3 MTR WDG B PH H2", "Value": "H2 >= 130" },
-      { "Parameter": "RCP 3 MTR BRG TEMP DE H2", "Value": "H2 >= 95" },
-      { "Parameter": "RCP 3 MTR BRG TEMP NDE H2", "Value": "H2 >= 95" },
-      { "Parameter": "RCP 3 MTR BRG DE VIB H2", "Value": "H2 >= 7.1" },
-      { "Parameter": "RCP 3 MTR BRG NDE VIB H2", "Value": "H2 >= 7.1" },
-      { "Parameter": "RCP 3 GB OIL SUMP TEMP H2", "Value": "H2 >= 105" },
-      { "Parameter": "RCP 3 PUMP OIL SUMP TEMP H2", "Value": "H2 >= 100" },
-      { "Parameter": "RCP 3 DE BRG TEMP H2", "Value": "H2 >= 85" },
-      { "Parameter": "RCP 3 DE BRG VIB H2", "Value": "H2 >= 11.9" },
-      { "Parameter": "RCP 3 NDE BRG VIB H2", "Value": "H2 >= 11.9" },
-      { "Parameter": "RCP 3 NDE BRG TEMP H2", "Value": "H2 >= 85" },
-      { "Parameter": "RCP 3 GB VIB H2", "Value": "H2 >= 7.1" },
+      { "Parameter": "RCP 3 MTR WDG R PH H2", "Value": ">= 130" },
+      { "Parameter": "RCP 3 MTR WDG Y PH H2", "Value": ">= 130" },
+      { "Parameter": "RCP 3 MTR WDG B PH H2", "Value": ">= 130" },
+      { "Parameter": "RCP 3 MTR BRG TEMP DE H2", "Value": ">= 95" },
+      { "Parameter": "RCP 3 MTR BRG TEMP NDE H2", "Value": ">= 95" },
+      { "Parameter": "RCP 3 MTR BRG DE VIB H2", "Value": ">= 7.1" },
+      { "Parameter": "RCP 3 MTR BRG NDE VIB H2", "Value": ">= 7.1" },
+      { "Parameter": "RCP 3 GB OIL SUMP TEMP H2", "Value": ">= 105" },
+      { "Parameter": "RCP 3 PUMP OIL SUMP TEMP H2", "Value": ">= 100" },
+      { "Parameter": "RCP 3 DE BRG TEMP H2", "Value": ">= 85" },
+      { "Parameter": "RCP 3 DE BRG VIB H2", "Value": "11.9" },
+      { "Parameter": "RCP 3 NDE BRG VIB H2", "Value": "11.9" },
+      { "Parameter": "RCP 3 NDE BRG TEMP H2", "Value": ">= 85" },
+      { "Parameter": "RCP 3 GB VIB H2", "Value": ">= 7.1" },
       { "Parameter": "RCP 3 ANY 2 TEMP SET BAD", "Value": "" },
       { "Parameter": "RCP 3 ANY 2 VIB SET BAD", "Value": "" },
       { "Parameter": "RCP 3 RUNNING & ISV CLOSE", "Value": "" },
       { "Parameter": "RCP 3 RUNNING & OV CLOSE", "Value": "" },
       { "Parameter": "RCP 3 RUNNING & DV NT CLOSE", "Value": "" },
       { "Parameter": "RCP 3 RUNNING & FV NT CLOSE", "Value": "" },
-      { "Parameter": "ABSORBER LEVEL <= L2", "Value": "L2 <= 6.9" }
+      { "Parameter": "ABSORBER LEVEL <= L2", "Value": "<= 6.9" }
     ]
   }
 };
