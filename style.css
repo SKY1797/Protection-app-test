@@ -5,7 +5,7 @@
     --bg-surface: #F8FAFD;
     --white: #FFFFFF;
     --ice-blue: #E2E8F0;
-    
+
     --card-bg: var(--white);
     --card-shadow: 0 4px 20px rgba(45, 66, 99, 0.05), inset 0 0 20px rgba(255, 255, 255, 0.5);
     --card-hover-shadow: 0 10px 30px rgba(45, 66, 99, 0.1);
@@ -260,18 +260,37 @@ tbody tr:last-child td {
 
 /* Animations */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes slideIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsive */
@@ -280,21 +299,27 @@ tbody tr:last-child td {
         flex-direction: row;
         gap: 8px;
     }
+
     .logo {
         max-height: 48px;
     }
+
     .app-header h1 {
         font-size: 1.5rem;
     }
+
     .app-header .subtitle {
         font-size: 1.25rem;
     }
+
     .view-title {
         font-size: 1.5rem;
     }
+
     .grid-container {
         grid-template-columns: 1fr;
     }
+
     .view-header {
         flex-direction: column-reverse;
         align-items: flex-start;
@@ -302,11 +327,14 @@ tbody tr:last-child td {
         margin-bottom: 1.5rem;
         margin-left: 0.25rem;
     }
-    th, td {
+
+    th,
+    td {
         padding: 0.85rem;
         font-size: 0.85rem;
     }
-    .btn-back{
+
+    .btn-back {
         padding: 0.65rem 1rem;
         gap: 0px;
     }
