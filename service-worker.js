@@ -1,4 +1,4 @@
-const CACHE_NAME = 'Protection-app-v3';
+const CACHE_NAME = 'Protection-app-v001';
 
 const urlsToCache = [
   './index.html',
