@@ -517,6 +517,46 @@ tbody tr:last-child td {
     border-bottom: none;
 }
 
+/* Standalone Footer */
+.footer {
+  width: 100%;
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.footer-content {
+  /* padding: 1rem; */
+  padding: 0rem 1rem 0.3rem 1rem;
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.footer-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+  /* margin: 0.5rem 0; */
+  margin: 0.5rem 0rem 0.75rem 0rem;
+}
+
+.footer-developer {
+  font-size: 0.875rem;
+  color: #a1c5cc;
+  /* color: var(--muted-foreground); */
+  margin-bottom: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.footer-developer::before {
+  content: "👨‍💻";
+  font-size: 1rem;
+}
+
 /* ============================== */
 /*         ANIMATIONS             */
 /* ============================== */
