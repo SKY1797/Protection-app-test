@@ -28,11 +28,21 @@
     padding: 0;
 }
 
+/* body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg-surface);
+    color: var(--text-dark);
+    min-height: 100vh;
+} */
+
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     background: var(--bg-surface);
     color: var(--text-dark);
     min-height: 100vh;
+    /* Add these two lines: */
+    display: flex;
+    flex-direction: column;
 }
 
 /* ============================== */
@@ -76,12 +86,23 @@ body {
 /* ============================== */
 /*        APP CONTAINER           */
 /* ============================== */
+
+/* #app-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.25rem 1.5rem;
+    animation: fadeIn 0.4s ease-out;
+} */
+
 #app-container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 1.25rem 1.5rem;
     animation: fadeIn 0.4s ease-out;
+    /* Add this line: */
+    flex-grow: 1;
 }
 
 /* ============================== */
@@ -536,15 +557,15 @@ tbody tr:last-child td {
 
 .footer-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--border), transparent);
-  /* margin: 0.5rem 0; */
+  /* Changed var(--border) to var(--border-color) */
+  background: linear-gradient(90deg, transparent, var(--border-color), transparent);
   margin: 0.5rem 0rem 0.75rem 0rem;
 }
 
 .footer-developer {
   font-size: 0.875rem;
-  color: #a1c5cc;
-  /* color: var(--muted-foreground); */
+  /* Changed from #a1c5cc to var(--text-muted) */
+  color: var(--text-muted);
   margin-bottom: 0.9rem;
   display: flex;
   align-items: center;
