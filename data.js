@@ -247,7 +247,7 @@ const appData = {
       { "Parameter": "MOTOR DE/NDE BRG VIB HIGH", "Value": "> 11 mm/s (3 s)" },
       { "Parameter": "SUCTION VALVE NOT OPEN", "Value": "" },
       { "Parameter": "SUCTION FILTER DP HIGH", "Value": "> 0.1 ksc" },
-      { "Parameter": "HOTWELL LEVEL LOW", "Value": "" },
+      { "Parameter": "HOTWELL LEVEL LOW", "Value": "< 200 mm" },
       { "Parameter": "HOTWELL LEVEL TX (2/3) FAILURE", "Value": "" },
       { "Parameter": "DISCH HDR PRESS LOW AND 3 CEP ON", "Value": "< 21 ksc (30 s)" },
       { "Parameter": "DISCH HDR PRESS TX (2/3) FAILURE", "Value": "" },
